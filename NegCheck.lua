@@ -1,5 +1,5 @@
 --Number checker
-print("===Welcome to Negstive number checker===")
+print("===Welcome to NegCheck===")
 while true do
   
   io.write("Enter Number>>")
