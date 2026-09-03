@@ -1,47 +1,46 @@
 # CheckStive
 
-A simple number state checker written in Lua. Just enter a number and it tells you if it's positive, negative, or zero!
+A simple Lua program that checks if numbers are positive, negative, or zero. That's it!
 
-## What does it do?
+## Quick Start
 
-CheckStive takes a number as input and tells you whether it's:
-- **Positive** (greater than 0)
-- **Negative** (less than 0)  
-- **Zero** (neither positive nor negative)
+### Just want to use it?
 
-It also handles invalid inputs gracefully and lets you try again.
-
-## How to use
-
-1. Make sure you have Lua installed
-2. Run the script:
-   ```bash
-   lua CheckStive.lua
-   ```
-3. Enter a number when prompted
-4. See the result!
-
-## Example
-
-```
-=== Welcome to NegStive ===
-Enter Number > 5
-Positive Number
-Enter Number > -10
-Negative Number
-Enter Number > 0
-The number is 0, neither positive nor negative
-Enter Number > hello
-Oh!, Alphabets and invalid inputs are not processed here. Please try again with a number!
+```bash
+lua cli.lua
 ```
 
-## Requirements
+Enter a number and it tells you what it is. Type `exit` to quit.
 
-- Lua (any recent version)
+### Want to use it in your code?
 
-## About
+```lua
+local checkstive = require("checkstive")
 
-This is a minimalist program that keeps things simple and straightforward. Perfect for learning or as a quick utility!
+checkstive.isPositive(5)   -- true
+checkstive.isNegative(-10) -- true
+checkstive.isZero(0)       -- true
+
+local state = checkstive.getState(42)
+-- state is now "positive"
+```
+
+## What's inside?
+
+- `checkstive.lua` - The actual module with all the functions
+- `cli.lua` - The interactive tool
+- That's all you need
+
+## Available functions
+
+- `isPositive(num)` - is it positive?
+- `isNegative(num)` - is it negative?
+- `isZero(num)` - is it zero?
+- `getState(num)` - returns "positive", "negative", or "zero"
+
+## Just needs Lua
+
+That's it. Run with any version of Lua.
 
 ---
 
